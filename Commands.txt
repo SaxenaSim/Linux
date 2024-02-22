@@ -1,31 +1,60 @@
 LIST OF LINUX COMMANDS:
 
-    'ls' : Lists directory contents. It displays the files and directories in the specified directory.
-    'ls -l': list detailed information about files and directories in the current directory.
-    'ls -a': gives all the hidden files
-    'pwd' (print working directory) : displays the full path of the current working directory.
-    'touch' : command used to create a blank file
-    'mkdir' : used to make a new directory 
-    'rmdir': removes a directory
-    'rm' : to remove file
-    'mv' : command used to move one file into other
-    'cp' : command used to copy files
-    'ls -R' : lists all the directories and even the files in the sub-directories.
-    'touch .<fileName>' : creates a hidden file
-    'cat <fileName>' : command is used to concatenate and display the content of files
-     -  'cat -b <fileName>' : adds numbering to the non-blank lines
-     -  'cat -n <fileName>' : adds numbering to all the lines
-    'man' : to get the description of a command
-    'gzip' : command used to compress the file
-    'gunzip' : command used to decompress the  file
-    'sudo -s' : this command is used to run a shell with elevated privileges, typically as the superuser (root). 
-    'top' : used to check overview of processes like what process is taking how much memory.
-    'chmod' : used to change the utility of file to change the permissions.
-     -  'chmod o+x <fileName>' : this command is used to add the executable permissions to others.
-     -  'chmod a-rwx' : this command is used to subtract all the permissions from all users.
+  *  'ls' : Lists directory contents. It displays the files and directories in the specified directory.There are many flags used with the    ls  command which are as follows:
+    1. -a (or --all): This flag lists all files and directories, including hidden ones that start with a dot (.).
+    2. -l: This flag displays detailed information about files and directories in long format.
+           Detailed information includes file permissions, number of links, owner, group, file size, last modified time, and filename.
+    3. R (or --recursive): This flag lists subdirectories recursively, displaying their contents as well.
+  
+  *  'pwd' (print working directory) : The pwd command in Linux operating system is used to print the current working directory.
+    
+  *  'touch' : touch command in Linux operating systems is used to create new empty files or update the access and modification timestamps of existing files. 
+     1. -a: This flag updates the access time of the specified file(s) to the current time without modifying their contents.
+            If the file doesn't exist, it's created as an empty file.
+     2. 'touch .<fileName>' : creates a hidden file.
+            
+  *  'mkdir' : The mkdir command in Unix-like operating systems (such as Linux) is used to create directories (also known as folders) in the file system. The name mkdir stands for "make directory." 
+  
+  * 'rmdir': The rmdir command in Unix-like operating systems (such as Linux) is used to remove empty directories (folders) from the file system. The name rmdir stands for "remove directory."
+  
+  *  'rm' : The rm command in Unix-like operating systems (such as Linux) is used to remove files and directories from the file system.
+  NOTE: Difference between rm and rmdir:
+       # rm is used to remove files and directories from the file system. It can remove both individual files and directories, regardless of whether they are empty or contain contents.
+       # rmdir is specifically designed to remove empty directories from the file system. It can only remove directories that are empty (i.e., contain no files or subdirectories). Unlike rm, rmdir cannot be used to remove individual files or non-empty directories.
+       
+  *  'mv' : The mv command in Unix-like operating systems (such as Linux) is used to move or rename files and directories within the file system. The name mv stands for "move."
+  
+  *  'cp' : The cp command in Unix-like operating systems (such as Linux) is used to copy files and directories from one location to another. The name cp stands for "copy."
+  
+  *  'cat <fileName>' : The cat command in Unix-like operating systems (such as Linux) is used to concatenate and display the content of files. The name cat stands for "concatenate." 
+      1. -b, --number-nonblank: Number non-empty output lines, starting at 1. This option is useful for adding line numbers to non-blank lines when displaying file contents.
+      2. -n, --number: Number all output lines, starting at 1. This option is similar to -b, but it adds line numbers to all lines, including blank lines.
+
+  *  'man' : The man command in Unix-like operating systems (such as Linux) is used to display the manual page of a specified command or topic. The name man stands for "manual." Manual pages contain detailed information and documentation about various commands, system calls, library functions, file formats, and more.
+  
+  *  'gzip' :The gzip command in Unix-like operating systems (such as Linux) is used to compress files.
+  
+  *  'gunzip' : The gunzip command in Unix-like operating systems (such as Linux) is used to decompress files that have been compressed. 
+  
+  *  'sudo -s' :The sudo -s command in Unix-like operating systems, such as Linux, is used to start a new shell session as the superuser (root). The sudo command allows a permitted user to execute a command as another user, typically the superuser or root, while the -s option specifies that a shell session should be started after authentication. This command starts a new shell session as the superuser (root) after successful authentication. Once the shell session is started, all subsequent commands run within that session will have superuser privileges.
+  
+  *  'top' : The top command in Unix-like operating systems (such as Linux) is a powerful utility used to display real-time information about system processes and resource usage. It provides an interactive and dynamic view of system activity, including information about CPU usage, memory usage, running processes, and more.
+  
+  *  'chmod' : he chmod command in Unix-like operating systems, including Linux, is used to change the permissions (mode) of files and directories. The name chmod stands for "change mode." Permissions control who can read, write, and execute a file or directory.
+     Symbolic Mode:
+
+       u: User/Owner
+       g: Group
+       o: Other (everyone else)
+       a: All (equivalent to ugo)
+       +: Adds permissions
+       -: Removes permissions
+       =: Sets permissions explicitly
+       -  'chmod o+x <fileName>' : this command is used to add the executable permissions to others.
+       -  'chmod a-rwx' : this command is used to subtract all the permissions from all users.
      
-     PS Commands :-
-     Command used to view information about processes running on Linux system. Stands for 'process status'
+  *   PS Commands :-
+     The ps command in Unix-like operating systems, including Linux, is used to display information about active processes running on the system. The name ps stands for "processes." It provides a snapshot of the current state of processes, including their process IDs (PIDs), resource usage, and other details. Following options used with ps:-
      
      'ps -e': this will display list of every process that is currently running on your system.
      'ps -e -f' : this will display full-format listing that includes additional details about each process.
@@ -33,15 +62,13 @@ LIST OF LINUX COMMANDS:
      'ps -u root' : it displays information about all processes on system that are owned by root user.
      'ps -e -h' : command displays information about all child processes created by each parent process.
      
-     GREP Command :-
-     Useful command which is used to search for matching patterns in a file. It is a short form for 'global regular expression print'.
-     It finds each line that matched the provided pattern.
+  *   GREP Command :-
+     The grep command in Unix-like operating systems, including Linux, is a powerful utility used for searching and matching patterns within files or streams of text. The name grep stands for "Global Regular Expression Print." It searches for lines in files or standard input that match a specified pattern and prints the matching lines to the standard output. 
      Following options used with grep:-
-     '-i, --ignore-case' : ignore case distinctions in pattern and input data.
-     '-v, --invert-match' : select non-matching lines of provided input pattern.
-     '-n, --line-number' : Prefix each line of matching output with the line number in input file.
-     '-w' : Find the exact matching word from input file or string
-     '-c' : counts the number of occurances of provided pattern. 
-
+     
+    -i, --ignore-case: Ignore case distinctions in both the pattern and input files.
+    -v, --invert-match: Invert the sense of matching to select non-matching lines.
+    -w, --word-regexp: Match whole words only. The pattern must be surrounded by word boundaries.
+    -c, --count: Suppress normal output; instead, print a count of matching lines for each input file.
 
 
