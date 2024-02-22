@@ -1,0 +1,47 @@
+LIST OF LINUX COMMANDS:
+
+    'ls' : Lists directory contents. It displays the files and directories in the specified directory.
+    'ls -l': list detailed information about files and directories in the current directory.
+    'ls -a': gives all the hidden files
+    'pwd' (print working directory) : displays the full path of the current working directory.
+    'touch' : command used to create a blank file
+    'mkdir' : used to make a new directory 
+    'rmdir': removes a directory
+    'rm' : to remove file
+    'mv' : command used to move one file into other
+    'cp' : command used to copy files
+    'ls -R' : lists all the directories and even the files in the sub-directories.
+    'touch .<fileName>' : creates a hidden file
+    'cat <fileName>' : command is used to concatenate and display the content of files
+     -  'cat -b <fileName>' : adds numbering to the non-blank lines
+     -  'cat -n <fileName>' : adds numbering to all the lines
+    'man' : to get the description of a command
+    'gzip' : command used to compress the file
+    'gunzip' : command used to decompress the  file
+    'sudo -s' : this command is used to run a shell with elevated privileges, typically as the superuser (root). 
+    'top' : used to check overview of processes like what process is taking how much memory.
+    'chmod' : used to change the utility of file to change the permissions.
+     -  'chmod o+x <fileName>' : this command is used to add the executable permissions to others.
+     -  'chmod a-rwx' : this command is used to subtract all the permissions from all users.
+     
+     PS Commands :-
+     Command used to view information about processes running on Linux system. Stands for 'process status'
+     
+     'ps -e': this will display list of every process that is currently running on your system.
+     'ps -e -f' : this will display full-format listing that includes additional details about each process.
+     'ps -C systemd' : tells the ps command to display information about all processes on system that are related to systemd process management system.
+     'ps -u root' : it displays information about all processes on system that are owned by root user.
+     'ps -e -h' : command displays information about all child processes created by each parent process.
+     
+     GREP Command :-
+     Useful command which is used to search for matching patterns in a file. It is a short form for 'global regular expression print'.
+     It finds each line that matched the provided pattern.
+     Following options used with grep:-
+     '-i, --ignore-case' : ignore case distinctions in pattern and input data.
+     '-v, --invert-match' : select non-matching lines of provided input pattern.
+     '-n, --line-number' : Prefix each line of matching output with the line number in input file.
+     '-w' : Find the exact matching word from input file or string
+     '-c' : counts the number of occurances of provided pattern. 
+
+
+
